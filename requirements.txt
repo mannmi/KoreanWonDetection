@@ -1,0 +1,7 @@
+#test (remove later)
+opencv-python
+pytesseract
+numpy
+
+
+
