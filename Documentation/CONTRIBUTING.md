@@ -1,11 +1,11 @@
 # KoreanWonDetection - Contributing    
 
 ## Write Code
-To setup the Project you may find the install guid Usful : https://github.com/mannmi/KoreanWonDetection/Documentation/INSTAL.md  
+To setup the Project you may find the install guideline useful : https://github.com/mannmi/KoreanWonDetection/Documentation/INSTAL.md  
 
 * Please ensure that the issue has not been addressed in an existing Pull Request
 * Check if an Issue has been created in the issue tracker, if not create a new one.
-* Dont create duplicate issues
+* Don't create duplicate issues
 * Changes that are larger (nontrivial) should be discussed in an issue first 
 * Features are to be developed in Topic Branches not the main.
 * The main branch is to be used for releases only
@@ -14,7 +14,8 @@ To setup the Project you may find the install guid Usful : https://github.com/ma
 
 ## Reporting Bugs
 * Before you report a bug ensure you are on the most recent version
-* Check the issue list to ensure no one has reported this issue already 
+* Check the issue list to ensure no one has reported this issue already
+* Follow the Reporting Guidelines below, if you have met both of the above conditions.
    
 Reporting guidelines:  
 * Summary of the issue
