@@ -33,6 +33,7 @@ This project is licensed under the LGPL-2.1 License. See the LICENSE file for de
 ## Acknowledgements
 
 - OpenCV: https://opencv.org/
+- OpenCV Forum: https://forum.opencv.org/
 - Contributors: Thanks to all the contributors who have helped with this project.
 
 Contributor List:
