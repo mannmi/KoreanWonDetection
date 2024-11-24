@@ -1,5 +1,5 @@
 # ProjectOSS
-Project is planed to be used for the Fianl Project of Opensource SW (Soul tech)
+Project is planed to be used for the Fianl Project of Opensource SW (Seoul tech)
 
 # Currency Identifier
 
