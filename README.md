@@ -27,7 +27,7 @@ Contributions are welcome! Please see the CONTRIBUTING.md, COMMIT_MESSAGE.md,COD
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the LGPL-2.1 License. See the LICENSE file for details.
 
 ## Acknowledgements
 
