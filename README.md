@@ -27,8 +27,8 @@ Contributions are welcome! Please see the CONTRIBUTING.md, COMMIT_MESSAGE.md,COD
 
 ## License
 
-This project is licensed under the LGPL-2.1 License. See the LICENSE file for details.<br>
-=> License: https://github.com/mannmi/KoreanWonDetection?tab=LGPL-2.1-1-ov-file
+This project is licensed under the LGPL-2.1 License. See the LICENSE file for details.
+* License => https://github.com/mannmi/KoreanWonDetection?tab=LGPL-2.1-1-ov-file
 
 ## Acknowledgements
 
