@@ -25,6 +25,9 @@ The detection system should allow for future enhancements, such as detecting add
 - User-Friendly Design:
 Clear APIs and documentation will ensure ease of use and integration, encouraging broader currency adoption and contribution.
 
+- Community to Commercial:
+Distribute to many users for educational purposes, and if projects and Discord are activated later, some functions are supplemented to take care of commercial purposes together
+
 ## Installation
 For a guid to how to install the application Refer to INSTALL.md
 => https://github.com/mannmi/KoreanWonDetection/Documentation/INSTAL.md
