@@ -1,7 +1,7 @@
 # KoreanWonDetection - Contributing    
 
 ## Write Code
-To setup the Project you may find the install guideline useful : https://github.com/mannmi/KoreanWonDetection/Documentation/INSTAL.md  
+To setup the Project you may find the installment guide useful : https://github.com/mannmi/KoreanWonDetection/Documentation/INSTAL.md  
 
 * Please ensure that the issue has not been addressed in an existing Pull Request
 * Check if an Issue has been created in the issue tracker, if not create a new one.
