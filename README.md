@@ -1,7 +1,4 @@
-# ProjectOSS
-Project is planed to be used for the Fianl Project of Opensource SW (Seoul tech)
-
-# Currency Identifier
+# Korean Won Detection
 
 This project uses OpenCV to identify different currencies from images. It leverages computer vision techniques to detect and classify various banknotes and coins (korean won).
 
@@ -9,6 +6,22 @@ This project uses OpenCV to identify different currencies from images. It levera
 
 - Detects and identifies different won from images (webcam feed)
 - Easy to extend with additional currencies
+
+## Philosophy
+
+The philosophy behind Korean Won Detection is built on accuracy, reliability, and adaptability, ensuring the tool meets diverse user needs effectively.
+
+- Accuracy as Priority:
+This project must identify the Korean Won symbol (₩) with precision, minimizing false positives or negatives. It should handle various contexts, such as text, numerical data, or mixed symbols.
+
+- Reliability Across Platforms:
+Consistent performance across environments is essential. This can be achieved through comprehensive testing and resilience against diverse input formats.
+
+- Adaptability for Growth:
+The detection system should allow for future enhancements, such as detecting additional symbols or integrating with larger financial systems.
+
+- User-Friendly Design:
+Clear APIs and documentation will ensure ease of use and integration, encouraging broader currency adoption and contribution.
 
 ## Installation
 For a guid to how to install the application Refer to INSTALL.md
@@ -39,4 +52,7 @@ This project is licensed under the LGPL-2.1 License. See the LICENSE file for de
 Contributor List:
 mannmi
 gogog01-29-2021
+Minhyuk12
+protruser
+ksj2001
 
