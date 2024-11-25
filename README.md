@@ -1,4 +1,17 @@
-![alt text](https://raw.githubusercontent.com/protruser/KoreanWonDetection/main/Documentation/Logo.webp)
+<p align="center">
+  <!-- PSE Acceleration Program logo -->
+  <img width=40% src="./Documentation/Logo.webp">
+</p>
+
+<p align="center">
+  <a href="https://github.com/mannmi/KoreanWonDetection/issues">🚀 Apply for Open Task</a> | <a href="https://github.com/mannmi/KoreanWonDetection/issues">✍️ Submit Your Idea</a>
+</p>
+
+<p align="center">
+  <a href="https://discord.gg/HTFRuQPy"><img src="https://img.shields.io/discord/901152454077452399?color=7289da&style=flat-square&label=Discord&logo=discord&logoColor=white"></a>
+
+  
+</p>
 
 # Korean Won Detection
 
