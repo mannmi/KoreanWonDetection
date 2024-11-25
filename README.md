@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mannmi/KoreanWonDetection/issues">🚀 Apply for Open Task</a> | <a href="https://github.com/mannmi/KoreanWonDetection/issues">✍️ Submit Your Idea</a>
+  <a href="https://github.com/mannmi/KoreanWonDetection/issues?q=is%3Aopen+is%3Aissue+-label%3A%22Application+Proposal%22+-label%3A%22WIP%22+">🚀 Apply for Open Task</a> | <a href="https://github.com/mannmi/KoreanWonDetection/issues">✍️ Submit Your Idea</a> | <a href="https://github.com/mannmi/KoreanWonDetection/issues/new?assignees=&labels=&projects=&template=bug_report.md&title="> 🐛 Submit Bug Report</a>
 </p>
 
 <p align="center">
