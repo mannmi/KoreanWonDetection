@@ -44,9 +44,12 @@ body:
         - Need help
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        <span style="color: red;">This is a public post. By checking the box you agree that we may use the posted content to improve our product.</span>
   - type: checkboxes
     attributes:
-      label: <span style="color: red;">This is a public post. By checking the box you agree that we may use the posted content to improve our product.</span>
       options:
         - label: I Agree
           required: true
