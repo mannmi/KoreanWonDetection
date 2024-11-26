@@ -1,0 +1,55 @@
+title: "[Create a Feature Request or Recommendation]"
+labels: ["Create a Feature Request or Recommendation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide an extensive explanation for the Feature or Recomendation you want implmented :)
+  - type: textarea
+    id: improvements
+    attributes:
+      label: Top 3 improvements
+      description: "What is it you want to see improved or added"
+      value: |
+        1.
+        2.
+        3.
+        ...
+      render: bash
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## Markdown header
+        And some more markdown
+  - type: input
+    id: has-id
+    attributes:
+      label: Suggestions
+      description: A detailed description
+    validations:
+      required: true
+  - type: dropdown
+    id: download
+    attributes:
+      label: This issue is Regarding
+      options:
+        - Documentation
+        - Question
+        - Is this a Bug ?
+        - Feature Request
+        - Need help
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: This is a public post. By checking the box you agree that we may use the Posted content to improve our product.
+      options:
+        - label: I Agree
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        ### The thrilling conclusion
+        _to our template_
