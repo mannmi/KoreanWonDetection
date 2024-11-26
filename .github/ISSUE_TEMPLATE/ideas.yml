@@ -1,4 +1,5 @@
-title: "[Create a Feature Request or Recommendation]"
+name: "Feature Request or Recommendation"
+description: "Please provide an extensive explanation for the Feature or Recommendation you want implemented :)"
 labels: ["Create a Feature Request or Recommendation"]
 body:
   - type: markdown
@@ -23,13 +24,11 @@ body:
       value: |
         ## Markdown header
         And some more markdown
-  - type: textarea
-    id: suggestions
+  - type: input
+    id: has-id
     attributes:
       label: Suggestions
       description: A detailed description
-      value: |
-        Please provide your suggestions here...
     validations:
       required: true
   - type: dropdown
