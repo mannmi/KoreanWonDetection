@@ -1,5 +1,4 @@
-name: "Feature Request or Recommendation"
-description: "Please provide an extensive explanation for the Feature or Recommendation you want implemented :)"
+title: "[Create a Feature Request or Recommendation]"
 labels: ["Create a Feature Request or Recommendation"]
 body:
   - type: markdown
@@ -24,11 +23,13 @@ body:
       value: |
         ## Markdown header
         And some more markdown
-  - type: input
-    id: has-id
+  - type: textarea
+    id: suggestions
     attributes:
       label: Suggestions
       description: A detailed description
+      value: |
+        Please provide your suggestions here...
     validations:
       required: true
   - type: dropdown
@@ -45,7 +46,7 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: This is a public post. By checking the box you agree that we may use the posted content to improve our product.
+      label: <span style="color: red;">This is a public post. By checking the box you agree that we may use the posted content to improve our product.</span>
       options:
         - label: I Agree
           required: true
