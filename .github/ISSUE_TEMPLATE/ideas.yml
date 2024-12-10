@@ -36,7 +36,7 @@ body:
     attributes:
       label: This issue is Regarding
       options:
-        - Documentation
+        - docs
         - Question
         - Is this a Bug?
         - Feature Request

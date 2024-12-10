@@ -1,7 +1,7 @@
 # KoreanWonDetection - Contributing    
 
 ## Write Code
-To setup the Project you may find the installment guide useful : https://github.com/mannmi/KoreanWonDetection/Documentation/INSTAL.md  
+To setup the Project you may find the installment guide useful : https://github.com/mannmi/KoreanWonDetection/docs/INSTAL.md  
 
 * Please ensure that the issue has not been addressed in an existing Pull Request
 * Check if an Issue has been created in the issue tracker, if not create a new one.
@@ -30,7 +30,7 @@ This Project is still in its infancy so No unit testing standards have been set 
 This will be remedied as son as possible.
 
 ## Well formated commit messages.
-See Commit Message Style link : https://github.com/mannmi/KoreanWonDetection/Documentation/COMMIT_MESSAGE.md
+See Commit Message Style link : https://github.com/mannmi/KoreanWonDetection/docs/COMMIT_MESSAGE.md
 
 ## Write Documentation
 Todo to be determined
