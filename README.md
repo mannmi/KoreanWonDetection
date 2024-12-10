@@ -1,6 +1,6 @@
 <p align="center">
   <!-- PSE Acceleration Program logo -->
-  <img width=40% src="./Documentation/Logo.webp">
+  <img width=40% src="docs/Logo.webp">
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@ Distribute to many users for educational purposes, and if projects and Discord a
 
 ## Installation
 For a guid to how to install the application Refer to INSTALL.md
-=> [Documentation/INSTAL.md](Documentation/INSTAL.md)
+=> [docs/INSTAL.md](docs/INSTAL.md)
 
 
 ## Usage
@@ -53,9 +53,9 @@ todo add usage description later
 
 Contributions are welcome! Please see the CONTRIBUTING.md, COMMIT_MESSAGE.md,CODE_OF_CONDUCT.md for guidelines.
 
-* CONTRIBUTING.md => [Documentation/CONTRIBUTING.md](Documentation/CONTRIBUTING.md)  
-* COMMIT_MESSAGE.md => [Documentation/COMMIT_MESSAGE.md](Documentation/CONTRIBUTING.md)
-* CODE_OF_CONDUCT.md => [Documentation/CODE_OF_CONDUCT.md](Documentation/CODE_OF_CONDUCT.md)
+* CONTRIBUTING.md => [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)  
+* COMMIT_MESSAGE.md => [docs/COMMIT_MESSAGE.md](docs/CONTRIBUTING.md)
+* CODE_OF_CONDUCT.md => [docs/CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md)
 
 ## License
 
