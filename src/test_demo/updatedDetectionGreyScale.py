@@ -1,5 +1,9 @@
+
+# updatedDetectionGreyScale.py
 import cv2
 import numpy as np
+import time  # time 모듈 추가
+from camera_utils import open_camera
 
 # Load the template image
 template = cv2.imread('../../images/won_1000.jpg', 0)
@@ -13,11 +17,13 @@ orb = cv2.ORB_create()
 # Find the keypoints and descriptors with ORB in the template
 kp_template, des_template = orb.detectAndCompute(template, None)
 
-# Access the camera
-cap = cv2.VideoCapture(0)
-if not cap.isOpened():
-    print("Error: Could not open camera.")
-    exit()
+# Use the common camera opening function
+cap = open_camera()
+
+# 카메라 시작 시간 기록
+start_time = time.time()
+
+test_score = 0
 
 while True:
     # Capture frame-by-frame
@@ -46,7 +52,7 @@ while True:
     frame_matches = cv2.drawMatches(template, kp_template, frame, kp_frame, good_matches, None, flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
 
     # If enough good matches are found, find the homography
-    if len(good_matches) > 20:
+    if len(good_matches) > 50:
         src_pts = np.float32([kp_template[m.queryIdx].pt for m in good_matches]).reshape(-1, 1, 2)
         dst_pts = np.float32([kp_frame[m.trainIdx].pt for m in good_matches]).reshape(-1, 1, 2)
 
@@ -59,9 +65,18 @@ while True:
 
         frame = cv2.polylines(frame, [np.int32(dst)], True, (0, 255, 0), 3, cv2.LINE_AA)
         print("Match found!")
+        break
+    else:
+        print("Not matching")
 
     # Display the video feed with detected template
     cv2.imshow('Detected Template', frame_matches)
+
+
+    # 카메라가 10초가 지나면 종료
+    elapsed_time = time.time() - start_time
+    if elapsed_time > 10:
+        break
 
     # Break the loop on 'q' key press
     if cv2.waitKey(1) & 0xFF == ord('q'):
