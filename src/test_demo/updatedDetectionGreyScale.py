@@ -73,9 +73,9 @@ while True:
     cv2.imshow('Detected Template', frame_matches)
 
 
-    # Camera closed, if 10 seconds past
+    # Camera closed, if 20 seconds past
     elapsed_time = time.time() - start_time
-    if elapsed_time > 10:
+    if elapsed_time > 20:
         break
 
     # Break the loop on 'q' key press
