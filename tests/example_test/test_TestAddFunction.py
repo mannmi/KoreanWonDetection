@@ -12,4 +12,3 @@ class TestAddFunction(unittest.TestCase):
 # Add an extra blank line after the class definition
 if __name__ == '__main__':
     unittest.main()
-
