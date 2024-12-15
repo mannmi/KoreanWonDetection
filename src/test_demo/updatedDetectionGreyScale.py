@@ -20,7 +20,7 @@ kp_template, des_template = orb.detectAndCompute(template, None)
 # Use the common camera opening function
 cap = open_camera()
 
-# 카메라 시작 시간 기록
+# Record the time
 start_time = time.time()
 
 test_score = 0
@@ -73,9 +73,10 @@ while True:
     cv2.imshow('Detected Template', frame_matches)
 
 
-    # 카메라가 10초가 지나면 종료
+    # Camera closed, if 20 seconds past
     elapsed_time = time.time() - start_time
-    if elapsed_time > 50:
+
+    if elapsed_time > 20:
         break
 
     # Break the loop on 'q' key press
