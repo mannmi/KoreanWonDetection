@@ -22,12 +22,10 @@ class TemplateMatcher:
 
     def process_frame(self, frame, orb):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        edges, bounding_boxes = self.edge_detection.detect_edges(gray)
+        edges = self.edge_detection.detect_edges(gray)
+
         highlighted_edges = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR)
         highlighted_edges[np.where((highlighted_edges == [255, 255, 255]).all(axis=2))] = [0, 0, 255]
-
-        for (x, y, w, h) in bounding_boxes:
-            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
         kp_frame, des_frame = orb.detectAndCompute(gray, None)
         if des_frame is None:
