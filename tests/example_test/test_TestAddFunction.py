@@ -8,6 +8,7 @@ class TestAddFunction(unittest.TestCase):
         self.assertEqual(add(-1, 1), 0)
         self.assertEqual(add(0, 0), 0)
 
+
 # Add an extra blank line after the class definition
 if __name__ == '__main__':
     unittest.main()
