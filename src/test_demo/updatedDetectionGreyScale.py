@@ -6,7 +6,7 @@ import time  # time 모듈 추가
 from camera_utils import open_camera
 
 # Load the template image
-template = cv2.imread('../../images/euro_5.jpg', 0)
+template = cv2.imread('../../images/won_1000.jpg', 0)
 if template is None:
     print("Error: Template image not found or cannot be opened.")
     exit()
