@@ -9,8 +9,6 @@ from src.edge_detection.EdgeDetector import EdgeDetection
 from src.ui.pop_up import SimplePopup
 
 
-
-
 class TemplateMatcher:
     def __init__(self, template_path, edge_method='canny',popUpActive=False, camera_index=0):
         self.template = cv2.imread(template_path, 0)
@@ -67,8 +65,6 @@ class TemplateMatcher:
             if not self.found and self.popupActive:
                 self.match_found()
                 self.found = True
-
-
 
         frame_matches = cv2.drawMatches(self.template, self.kp_template, frame, kp_frame, good_matches, None,
                                         matchesMask=matches_mask, flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
