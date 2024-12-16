@@ -25,18 +25,51 @@ class TestConfigLoader(unittest.TestCase):
     def test_yml_loader_data(self):
         print(f"Running test ====> {self._testMethodName}")
         dataRead = self.ymlLoader.data
-        refString = {'System': {'ProjectRoot': 'F:\\PycharmProjects\\TPRO', 'chunksize': '10 ** 1', 'delimiter': ';',
-                                'encoding': 'utf-8', 'lineterminator': '\\n', 'projectRoot_file': 'appDemoAsync.py'},
-                     'acceskeys': {'HUGGINGFACE_TOKEN': 'hf_testtoken'}, 'bertModel': [
-                {'filter': {'model_name': 'unitary/unbiased-toxic-roberta', 'model_path': '/models/filtration_model'}}],
-                     'combinedModel': {
-                         'contains': {'-gpt2': {'model_name': 'joined-Model', 'model_path': 'models/joined-Model'}}},
-                     'gpt2Model': [{'gpt2': {'GPT2LMHeadModel': 'gpt2', 'GPT2Tokenizer': 'gpt2', 'model_name': 'gpt2',
-                                             'model_path': 'models/gpt2_model'}}, {
-                                       'gpt2-german': {'GPT2LMHeadModel': 'dbmdz/german-gpt2',
-                                                       'GPT2Tokenizer': 'dbmdz/german-gpt2',
-                                                       'model_name': 'dbmdz/german-gpt2',
-                                                       'model_path': 'models/german-gpt2'}}]}
+        refString = {
+            'System': {
+                'ProjectRoot': 'F:\\PycharmProjects\\TPRO',
+                'chunksize': '10 ** 1',
+                'delimiter': ';',
+                'encoding': 'utf-8',
+                'lineterminator': '\\n',
+                'projectRoot_file': 'appDemoAsync.py'
+            },
+            'acceskeys': {'HUGGINGFACE_TOKEN': 'hf_testtoken'},
+            'bertModel': [
+                {
+                    'filter': {
+                        'model_name': 'unitary/unbiased-toxic-roberta',
+                        'model_path': '/models/filtration_model'
+                    }
+                }
+            ],
+            'combinedModel': {
+                'contains': {
+                    '-gpt2': {
+                        'model_name': 'joined-Model',
+                        'model_path': 'models/joined-Model'
+                    }
+                }
+            },
+            'gpt2Model': [
+                {
+                    'gpt2': {
+                        'GPT2LMHeadModel': 'gpt2',
+                        'GPT2Tokenizer': 'gpt2',
+                        'model_name': 'gpt2',
+                        'model_path': 'models/gpt2_model'
+                    }
+                },
+                {
+                    'gpt2-german': {
+                        'GPT2LMHeadModel': 'dbmdz/german-gpt2',
+                        'GPT2Tokenizer': 'dbmdz/german-gpt2',
+                        'model_name': 'dbmdz/german-gpt2',
+                        'model_path': 'models/german-gpt2'
+                    }
+                }
+            ]
+        }
         self.assertEqual(dataRead, refString)
 
     def test_yml_loader_keyAcces(self):

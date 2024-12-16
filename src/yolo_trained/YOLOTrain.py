@@ -56,12 +56,6 @@ class YOLOTrainer:
         if self.device == 'cuda':
             self.measure_gpu_performance()
 
-        model = YOLO(self.model_path).to(self.device)
-        ymlLoader = YmlLoader("../../config/yolo.yml")
-
-        stream1 = torch.cuda.Stream()
-        stream2 = torch.cuda.Stream()
-
         with open(checkpoint_file, "w") as f:
             f.write("Training completed")
 

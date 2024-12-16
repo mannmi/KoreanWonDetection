@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication, QLabel, QDialog, QVBoxLayout
+from PyQt6.QtWidgets import QLabel, QDialog, QVBoxLayout
 
 
 class SimplePopup(QDialog):
