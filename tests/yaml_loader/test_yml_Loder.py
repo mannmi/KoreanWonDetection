@@ -16,8 +16,8 @@ class TestConfigLoader(unittest.TestCase):
 
     def setUp(self):
         # print(f"Running config.yml: {self._testMethodName}")
-        conf = "/app/tests/TestData/config.yml"
-        test_file = "/app/tests/TestData/tmpConfig.yml"
+        conf = "./TestData/config.yml"
+        test_file = "./TestData/tmpConfig.yml"
         # use os to copy the file
         os.system(f'cp {conf} {test_file}')
         self.ymlLoader = YmlLoader(test_file)
