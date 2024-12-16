@@ -1,6 +1,5 @@
 import os
 import unittest
-from unittest.mock import patch, mock_open
 from src.config_loader.configLoader import YmlLoader
 
 
