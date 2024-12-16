@@ -49,7 +49,7 @@ jobs:
     - name: Lint code
       run: |
         pip install flake8
-        flake8 . --exclude Algorithm_Research/*
+        flake8 . --exclude Algorithm_Research
 
     # Step to run tests with coverage
     - name: Run tests with coverage
