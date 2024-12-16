@@ -3,7 +3,7 @@ from unittest.mock import patch, mock_open
 import os
 import torch
 
-from src.os_calls.os_calls import is_running_in_docker, check_cuda_available, os_calls
+from src.os_calls.oscalls import is_running_in_docker, check_cuda_available, OsCalls
 
 
 # Assuming the functions and class are in a module named `module_name`
@@ -49,14 +49,14 @@ class TestOSCalls(unittest.TestCase):
     @patch('platform.system', return_value='Windows')
     @patch('os.system')
     def test_clear_windows(self, mock_system, mock_platform):
-        os_call = os_calls()
+        os_call = OsCalls()
         os_call.clear()
         mock_system.assert_called_once_with('cls')
 
     @patch('platform.system', return_value='Linux')
     @patch('os.system')
     def test_clear_linux(self, mock_system, mock_platform):
-        os_call = os_calls()
+        os_call = OsCalls()
         os_call.clear()
         mock_system.assert_called_once_with('clear')
 

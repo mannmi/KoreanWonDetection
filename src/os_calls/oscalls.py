@@ -34,7 +34,7 @@ def check_cuda_available():
         return False
 
 
-class os_calls:
+class OsCalls:
     def __init__(self):
         import platform
         # Get the operating system name
