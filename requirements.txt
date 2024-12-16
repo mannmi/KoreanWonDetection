@@ -1,4 +1,15 @@
 #test (remove later)
+pytest
+sip
+pyQt6
 opencv-python
 pytesseract
 numpy
+torch
+torchvision
+scipy
+scikit-learn
+saliency
+setuptools
+ultralytics
+opencv-python-headless
