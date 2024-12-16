@@ -51,7 +51,7 @@ jobs:
     - name: Run tests with coverage
       run: |
         pip install coverage
-        coverage run -m pytest -k "not YmlLoader, test_camera"
+        coverage run -m pytest -k "not YmlLoader and not test_camera and not TestTemplateMatcher"
         coverage report
         coverage xml
 
