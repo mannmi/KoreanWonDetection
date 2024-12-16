@@ -29,6 +29,7 @@ class YOLOController:
         else:
             print("Invalid mode. Please choose 'train', 'validate', 'test', or 'detect'.")
 
+
 if __name__ == '__main__':
     # Example usage
     mode = 'detect'  # Change to 'train', 'validate', 'test', or 'detect' as needed
