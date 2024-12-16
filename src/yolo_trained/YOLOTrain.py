@@ -2,7 +2,6 @@ import os
 import torch
 import matplotlib.pyplot as plt
 from ultralytics import YOLO
-from src.config_loader.configLoader import YmlLoader
 from src.os_calls.oscalls import check_cuda_available
 
 
