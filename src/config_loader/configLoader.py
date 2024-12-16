@@ -39,7 +39,7 @@ import yaml
 #
 # @endcode
 
-class Yml_Loader:
+class YmlLoader:
     ## @brief The constructor for the Yml_Loader class.
     #  @param pathConfig The path to the configuration file.
     def __init__(self, pathConfig):
