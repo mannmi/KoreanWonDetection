@@ -1,9 +1,6 @@
 import cv2
 import numpy as np
 import json
-
-from PyQt6.QtWidgets import QApplication
-
 from src.camera.camera import Camera
 from src.edge_detection.EdgeDetector import EdgeDetection
 from src.ui.pop_up import SimplePopup
@@ -20,15 +17,6 @@ class TemplateMatcher:
         self.edge_detection = EdgeDetection(edge_method)
         self.bf = cv2.BFMatcher(cv2.NORM_HAMMING)
         self.bbox = None
-        self.found = False
-        self.popup = None
-
-    def match_found(self):
-        app = QApplication(sys.argv)
-        print(type(app))
-        message = "Match to Currency was found."
-        self.popup = SimplePopup(message)
-        self.popup.show()
 
     def set_edge_method(self, method):
         self.edge_detection.set_method(method)
@@ -61,9 +49,6 @@ class TemplateMatcher:
             frame = cv2.polylines(frame, [np.int32(dst)], True, (0, 255, 0), 3, cv2.LINE_AA)
             print("Match found!")
             print(len(good_matches))
-            if not self.found and self.popupActive:
-                self.match_found()
-                self.found = True
 
         frame_matches = cv2.drawMatches(self.template, self.kp_template, frame, kp_frame, good_matches, None,
                                         matchesMask=matches_mask, flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
