@@ -57,15 +57,15 @@ jobs:
           pip install flake8
           flake8 . --exclude Algorithm_Research --ignore=E266,E501
 
-#      - name: Run tests with coverage
-#        env:
-#          COVERAGE_PROCESS_START: .coveragerc
-#        run: |
-#          pip install coverage
-#          coverage report
-#          coverage xml
-#
-#      - name: Upload coverage to Codecov
-#        uses: codecov/codecov-action@v2
-#        with:
-#          file: coverage.xml
+      - name: Run tests with coverage
+        env:
+          COVERAGE_PROCESS_START: .coveragerc
+        run: |
+          pip install coverage
+          coverage report
+          coverage xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          file: coverage.xml
