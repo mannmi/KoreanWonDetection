@@ -1,4 +1,4 @@
-# updatedDetectionGreyScale.py
+# updatedDetectionGreyScale_sys.py
 import cv2
 import numpy as np
 import time  # time 모듈 추가

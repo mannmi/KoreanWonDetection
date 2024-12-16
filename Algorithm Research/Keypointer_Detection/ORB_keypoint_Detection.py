@@ -1,7 +1,0 @@
-image = cv2.imread("image.jpg", cv2.IMREAD_GRAYSCALE)
-orb = cv2.ORB_create()
-keypoints = orb.detect(image, None)
-output = cv2.drawKeypoints(image, keypoints, None)
-cv2.imshow("ORB Keypoints", output)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
