@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import json
 
+
 class TemplateMatcher:
     def __init__(self, template_path, camera_index=0):
         # Load the template image in grayscale
@@ -77,7 +78,8 @@ class TemplateMatcher:
                             # Create ORB detector with current parameters
                             orb = cv2.ORB_create(nfeatures=nfeatures, scaleFactor=scaleFactor, nlevels=nlevels,
                                                  edgeThreshold=edgeThreshold, firstLevel=0, WTA_K=2,
-                                                 scoreType=cv2.ORB_HARRIS_SCORE, patchSize=31, fastThreshold=fastThreshold)
+                                                 scoreType=cv2.ORB_HARRIS_SCORE, patchSize=31,
+                                                 fastThreshold=fastThreshold)
                             # Detect keypoints and descriptors in the template
                             self.kp_template, self.des_template = orb.detectAndCompute(self.template, None)
                             if self.des_template is None:
@@ -97,7 +99,12 @@ class TemplateMatcher:
 
                             # Update the best parameters if a better match is found
                             if match:
-                                num_matches = len([m for m, n in self.bf.knnMatch(self.des_template, orb.detectAndCompute(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), None)[1], k=2) if m.distance < 0.75 * n.distance])
+                                num_matches = len([m for m, n in self.bf.knnMatch(self.des_template,
+                                                                                  orb.detectAndCompute(
+                                                                                      cv2.cvtColor(frame,
+                                                                                                   cv2.COLOR_BGR2GRAY),
+                                                                                      None)[1], k=2) if
+                                                   m.distance < 0.75 * n.distance])
                                 if num_matches > best_matches:
                                     best_matches = num_matches
                                     best_params = (nfeatures, scaleFactor, nlevels, edgeThreshold, fastThreshold)
@@ -128,7 +135,8 @@ class TemplateMatcher:
             params = json.load(f)
 
         # Create ORB detector with the loaded parameters
-        orb = cv2.ORB_create(nfeatures=params['nfeatures'], scaleFactor=params['scaleFactor'], nlevels=params['nlevels'],
+        orb = cv2.ORB_create(nfeatures=params['nfeatures'], scaleFactor=params['scaleFactor'],
+                             nlevels=params['nlevels'],
                              edgeThreshold=params['edgeThreshold'], firstLevel=0, WTA_K=2,
                              scoreType=cv2.ORB_HARRIS_SCORE, patchSize=31, fastThreshold=params['fastThreshold'])
         # Detect keypoints and descriptors in the template
@@ -157,6 +165,7 @@ class TemplateMatcher:
 # Example usage:
 if __name__ == "__main__":
     import sys
+
     mode = sys.argv[1] if len(sys.argv) > 1 else 'find'
 
     matcher = TemplateMatcher(r'/images/won_1000.jpg')

@@ -10,7 +10,7 @@ from src.ui.pop_up import SimplePopup
 
 
 class TemplateMatcher:
-    def __init__(self, template_path, edge_method='canny',popUpActive=False, camera_index=0):
+    def __init__(self, template_path, edge_method='canny', popUpActive=False, camera_index=0):
         self.template = cv2.imread(template_path, 0)
         if self.template is None:
             raise ValueError("Error: Template image not found or cannot be opened.")
@@ -20,16 +20,15 @@ class TemplateMatcher:
         self.edge_detection = EdgeDetection(edge_method)
         self.bf = cv2.BFMatcher(cv2.NORM_HAMMING)
         self.bbox = None
-        self.found =False
+        self.found = False
         self.popup = None
 
     def match_found(self):
         app = QApplication(sys.argv)
+        print(type(app))
         message = "Match to Currency was found."
         self.popup = SimplePopup(message)
         self.popup.show()
-        # sys.exit(app.exec())
-        #sys.exit(app.exec())
 
     def set_edge_method(self, method):
         self.edge_detection.set_method(method)
@@ -173,7 +172,7 @@ if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else 'find'
 
     matcher = TemplateMatcher(
-        r'C:\Users\mannnmi\PycharmProjects\KoreanWonDetection\images\won_1000.jpg', "sobel",True)
+        r'C:\Users\mannnmi\PycharmProjects\KoreanWonDetection\images\won_1000.jpg', "sobel", True)
     if mode == 'find':
         matcher.find_best_parameters()
     elif mode == 'use':

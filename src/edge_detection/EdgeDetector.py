@@ -1,5 +1,5 @@
 import cv2
-import numpy as np
+
 
 class EdgeDetection:
     def __init__(self, method='canny'):
@@ -35,7 +35,7 @@ class EdgeDetection:
         edges = cv2.convertScaleAbs(edges)
         return edges
 
-# Example usage:
+
 if __name__ == "__main__":
     edge_detector = EdgeDetection(method='canny')
     cap = cv2.VideoCapture(0)

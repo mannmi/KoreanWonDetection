@@ -63,7 +63,8 @@ def cluster_and_visualize_keypoints(kp_template, kp_frame, good_matches, frame):
 
     n_clusters = min(len(all_pts), 5)
     kmeans = KMeans(n_clusters=n_clusters, random_state=0).fit(all_pts)
-    colors = [(np.random.randint(0, 255), np.random.randint(0, 255), np.random.randint(0, 255)) for _ in range(n_clusters)]
+    colors = [(np.random.randint(0, 255), np.random.randint(0, 255), np.random.randint(0, 255)) for _ in
+              range(n_clusters)]
     cluster_labels = kmeans.labels_
 
     visualization = frame.copy()
@@ -110,6 +111,7 @@ def saliency_based_matching(frame, keypoints, matches):
         cv2.line(visualization, pt1, pt2, (0, 255, 0), 2)
 
     cv2.imshow("Saliency-Based Matching", visualization)
+
 
 # Main script
 template_path = '../../images/won_1000.jpg'
@@ -176,4 +178,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-

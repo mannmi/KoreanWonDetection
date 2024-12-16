@@ -48,7 +48,8 @@ while True:
             good_matches.append(m)
 
     # Draw matches
-    frame_matches = cv2.drawMatches(template, kp_template, frame, kp_frame, good_matches, None, flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+    frame_matches = cv2.drawMatches(template, kp_template, frame, kp_frame, good_matches, None,
+                                    flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
 
     # If enough good matches are found, find the homography
     if len(good_matches) > 60:
@@ -64,7 +65,7 @@ while True:
 
         # extract selected area (ROI)
         x, y, w, h = cv2.boundingRect(np.int32(dst))
-        roi = gray[y:y+h, x:x+w]
+        roi = gray[y:y + h, x:x + w]
 
         # separate from 02, 03 and 06 areas, these numbers related to hidden images
         roi_02 = roi[:, 0:200]
