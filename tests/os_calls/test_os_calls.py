@@ -1,4 +1,8 @@
+import os
+import sys
 import unittest
+# Add the src directory to the Python path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 from unittest.mock import patch, mock_open
 from src.os_calls.oscalls import is_running_in_docker, check_cuda_available
 
