@@ -13,7 +13,7 @@
   
 </p>
 
-# Korean Won Detection :heavy_dollar_sign:
+# Korean Won Detection :heavy_dollar_sign:  :kr:
 
 This project uses OpenCV to identify different currencies from images. It leverages computer vision techniques to detect and classify various banknotes and coins (korean won).
 
@@ -58,12 +58,12 @@ Contributions are welcome! Please see the CONTRIBUTING.md, COMMIT_MESSAGE.md,COD
 * COMMIT_MESSAGE.md => [docs/COMMIT_MESSAGE.md](docs/CONTRIBUTING.md)
 * CODE_OF_CONDUCT.md => [docs/CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md)
 
-## License
+## License :city_sunrise:
 
 This project is licensed under the LGPL-2.1 License. See the LICENSE file for details.
 * License => https://github.com/mannmi/KoreanWonDetection?tab=LGPL-2.1-1-ov-file
 
-## Acknowledgements
+## Acknowledgements :love_hotel:
 
 - OpenCV: https://opencv.org/
 - OpenCV Forum: https://forum.opencv.org/
@@ -76,5 +76,5 @@ Minhyuk12
 protruser
 ksj2001
 
-## Github Wiki & Education
+## Github Wiki & Education :church:
 Github Wiki Link => [github.com/mannmi/KoreanWonDetection/wiki](github.com/mannmi/KoreanWonDetection/wiki)
