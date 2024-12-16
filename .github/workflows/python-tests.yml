@@ -62,7 +62,6 @@ jobs:
         COVERAGE_PROCESS_START: .coveragerc
       run: |
         pip install coverage
-        coverage run -m pytest -k "not YmlLoader and not test_camera and not TestTemplateMatcher"
         coverage report
         coverage xml
 
