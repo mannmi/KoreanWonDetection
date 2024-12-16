@@ -47,7 +47,7 @@ For a guid to how to install the application Refer to INSTALL.md
 
 
 ## Usage
-todo add usage description later
+[To check Github Wiki to know how to use our code!](https://github.com/mannmi/KoreanWonDetection/wiki/How-it-works)
 
 ## Contributing
 
