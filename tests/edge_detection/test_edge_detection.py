@@ -17,7 +17,7 @@ class TestEdgeDetection(unittest.TestCase):
 
     def test_set_method(self):
         self.edge_detection.set_method('sobel')
-        self.assertEqual(self.edge_detection.detect_edges, 'sobel', "Edge detection method should be 'sobel'.")
+        self.assertEqual(self.edge_detection.method, 'sobel', "Edge detection method should be 'sobel'.")
 
 
 if __name__ == '__main__':

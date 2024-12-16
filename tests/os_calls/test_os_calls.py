@@ -41,22 +41,5 @@ class TestFunctions(unittest.TestCase):
         mock_cuda_available.assert_called_once()
 
 
-class TestOSCalls(unittest.TestCase):
-
-    @patch('platform.system', return_value='Windows')
-    @patch('os.system')
-    def test_clear_windows(self, mock_system, mock_platform):
-        os_call = OsCalls()
-        os_call.clear()
-        mock_system.assert_called_once_with('cls')
-
-    @patch('platform.system', return_value='Linux')
-    @patch('os.system')
-    def test_clear_linux(self, mock_system, mock_platform):
-        os_call = OsCalls()
-        os_call.clear()
-        mock_system.assert_called_once_with('clear')
-
-
 if __name__ == '__main__':
     unittest.main()

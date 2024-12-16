@@ -1,29 +1,25 @@
-# This function is adapted from a private project.
-# Original project: https://github.com/mannmi/TPRO
-# Author: mannmi
-# Date: last modified Nov 29, 2023
-# (reduced version of)
-
-import unittest
 import os
+import unittest
+from unittest.mock import patch, mock_open
 from src.config_loader.configLoader import YmlLoader
 
 
 class TestConfigLoader(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        print(f"======== {cls.__name__}========")
-
     def setUp(self):
-        # print(f"Running config.yml: {self._testMethodName}")
-        conf = "./TestData/config.yml"
-        test_file = "./TestData/tmpConfig.yml"
-        # use os to copy the file
+        if os.getenv('GITHUB_ACTIONS'):
+            conf = "./tests/yaml_loader/TestData/config.yml"
+            test_file = "./tests/yaml_loader/TestData/tmpConfig.yml"
+        else:
+            conf = "./TestData/config.yml"
+            test_file = "./TestData/tmpConfig.yml"
+
+        if not os.path.exists(conf):
+            raise FileNotFoundError(f"Config file not found: {conf}")
+
         os.system(f'cp {conf} {test_file}')
         self.ymlLoader = YmlLoader(test_file)
 
     def test_yml_loader_data(self):
-        print(f"Running test ====> {self._testMethodName}")
         dataRead = self.ymlLoader.data
         refString = {
             'System': {
@@ -73,13 +69,11 @@ class TestConfigLoader(unittest.TestCase):
         self.assertEqual(dataRead, refString)
 
     def test_yml_loader_keyAcces(self):
-        print(f"Running test ====> {self._testMethodName}")
         dataRead = self.ymlLoader.data['System']['delimiter']
         refString = ';'
         self.assertEqual(dataRead, refString)
 
     def test_yml_loader_changeKey(self):
-        print(f"Running test ====> {self._testMethodName}")
         dataRead = self.ymlLoader.data['System']['delimiter']
         refString = ';'
         self.assertEqual(dataRead, refString)

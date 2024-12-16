@@ -43,6 +43,10 @@ jobs:
       run: |
         ls -R
 
+    - name: List TestData directory contents
+      run: |
+        ls -R tests/yaml_loader/TestData
+
     - name: Lint code
       run: |
         pip install flake8
