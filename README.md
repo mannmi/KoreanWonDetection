@@ -75,3 +75,5 @@ Minhyuk12
 protruser
 ksj2001
 
+## Github Wiki and Education
+Github Wiki Link => [github.com/mannmi/KoreanWonDetection/wiki](github.com/mannmi/KoreanWonDetection/wiki)
