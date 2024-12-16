@@ -2,6 +2,13 @@
 opencv-python
 pytesseract
 numpy
-
-
+torch
+opencv-python
+torchvision
+scipy
+scikit-learn
+saliency
+setuptools
+ultralytics
+pyQt6
 

@@ -2,20 +2,36 @@ import cv2
 import numpy as np
 import json
 
+from PyQt6.QtWidgets import QApplication
+
 from src.camera.camera import Camera
 from src.edge_detection.EdgeDetector import EdgeDetection
+from src.ui.pop_up import SimplePopup
+
+
 
 
 class TemplateMatcher:
-    def __init__(self, template_path, edge_method='canny', camera_index=0):
+    def __init__(self, template_path, edge_method='canny',popUp=False, camera_index=0):
         self.template = cv2.imread(template_path, 0)
         if self.template is None:
             raise ValueError("Error: Template image not found or cannot be opened.")
 
+        self.popup = popUp
         self.camera = Camera(camera_index)
         self.edge_detection = EdgeDetection(edge_method)
         self.bf = cv2.BFMatcher(cv2.NORM_HAMMING)
         self.bbox = None
+        self.found =False
+        self.popup = None
+
+    def match_found(self):
+        app = QApplication(sys.argv)
+        message = "Match to Currency was found."
+        self.popup = SimplePopup(message)
+        self.popup.show()
+        # sys.exit(app.exec())
+        #sys.exit(app.exec())
 
     def set_edge_method(self, method):
         self.edge_detection.set_method(method)
@@ -36,7 +52,7 @@ class TemplateMatcher:
         good_matches = [m for m, n in matches if len(matches) > 1 and m.distance < 0.75 * n.distance]
 
         matches_mask = None
-        if len(good_matches) > 30:
+        if len(good_matches) > 150:
             src_pts = np.float32([self.kp_template[m.queryIdx].pt for m in good_matches]).reshape(-1, 1, 2)
             dst_pts = np.float32([kp_frame[m.trainIdx].pt for m in good_matches]).reshape(-1, 1, 2)
             M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC, 5.0)
@@ -48,6 +64,11 @@ class TemplateMatcher:
             frame = cv2.polylines(frame, [np.int32(dst)], True, (0, 255, 0), 3, cv2.LINE_AA)
             print("Match found!")
             print(len(good_matches))
+            if not self.found and self.popup:
+                self.match_found()
+                self.found = True
+
+
 
         frame_matches = cv2.drawMatches(self.template, self.kp_template, frame, kp_frame, good_matches, None,
                                         matchesMask=matches_mask, flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
@@ -156,7 +177,7 @@ if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else 'find'
 
     matcher = TemplateMatcher(
-        r'C:\Users\mannnmi\PycharmProjects\KoreanWonDetection\images\won_1000.jpg', "sobel")
+        r'C:\Users\mannnmi\PycharmProjects\KoreanWonDetection\images\won_1000.jpg', "sobel",True)
     if mode == 'find':
         matcher.find_best_parameters()
     elif mode == 'use':
