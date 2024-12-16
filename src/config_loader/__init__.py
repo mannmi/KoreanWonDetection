@@ -13,13 +13,8 @@ def check_file_exists(file_path):
 
     # Check if the file is accessible
     if not os.access(file_path, os.R_OK):
-        print(f"Error: The file '{file_path}' is not accessible (no read permissions).")
+        print(f"Error: The file '{file_path}' is not accessible "
+              "(no read permissions).")
         sys.exit(1)
 
     print(f"The file '{file_path}' exists and is accessible.")
-
-
-# Example usage
-# file_path = '/app/src/config_loader/configLoader.py'
-#
-# #check_file_exists(file_path)

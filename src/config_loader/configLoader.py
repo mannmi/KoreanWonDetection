@@ -61,10 +61,9 @@ class YmlLoader:
         self.data[key] = value
         # self.save_config()
 
-    def detect_doblicates(self, tmpdata):
+    def detect_doublicates(self, tmpdata):
         duplicates = [key for key, value in collections.Counter(tmpdata.values()).items() if value > 1]
         print(duplicates)
-
 
     ## @brief Load the configuration data from the configuration file.
     #  @return The configuration data.
@@ -78,7 +77,6 @@ class YmlLoader:
             config = yaml.safe_load(file)
 
         return config if config else {}
-
 
     ## @brief Find the project root directory.
     #  @return The path to the project root directory.

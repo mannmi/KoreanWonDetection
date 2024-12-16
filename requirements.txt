@@ -1,15 +1,15 @@
 #test (remove later)
+pytest
+sip
+pyQt6
 opencv-python
 pytesseract
 numpy
 torch
-opencv-python
 torchvision
 scipy
 scikit-learn
 saliency
 setuptools
 ultralytics
-pyQt6
-pytest
-
+opencv-python-headless

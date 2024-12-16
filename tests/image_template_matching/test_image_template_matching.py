@@ -1,5 +1,4 @@
 import unittest
-import cv2
 import numpy as np
 from unittest.mock import patch, MagicMock
 
@@ -41,7 +40,6 @@ class TestTemplateMatcher(unittest.TestCase):
             mock_VideoCapture.return_value = mock_cap
             with self.assertRaises(ValueError):
                 TemplateMatcher('fake_path.jpg')
-
 
 
 if __name__ == '__main__':

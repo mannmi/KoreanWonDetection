@@ -6,6 +6,7 @@ from sklearn.cluster import KMeans
 orb = cv2.ORB_create()
 sift = cv2.SIFT_create()
 
+
 def detect_keypoints_and_descriptors(image, method="ORB"):
     """
     Detect keypoints and compute descriptors using ORB or SIFT.
@@ -18,6 +19,7 @@ def detect_keypoints_and_descriptors(image, method="ORB"):
         raise ValueError("Invalid method. Choose 'ORB' or 'SIFT'.")
     return keypoints, descriptors
 
+
 def match_keypoints(des_template, des_frame, method="ORB"):
     """
     Match descriptors using BFMatcher with Lowe's ratio test.
@@ -27,6 +29,7 @@ def match_keypoints(des_template, des_frame, method="ORB"):
     matches = bf.knnMatch(des_template, des_frame, k=2)
     good_matches = [m for m, n in matches if m.distance < 0.75 * n.distance]
     return good_matches
+
 
 def find_homography(template, kp_template, frame, kp_frame, good_matches):
     """
@@ -45,6 +48,7 @@ def find_homography(template, kp_template, frame, kp_frame, good_matches):
         return frame
     return frame
 
+
 def cluster_and_visualize_keypoints(kp_template, kp_frame, good_matches, frame):
     """
     Cluster matching keypoints and visualize matches with different colors.
@@ -59,7 +63,8 @@ def cluster_and_visualize_keypoints(kp_template, kp_frame, good_matches, frame):
 
     n_clusters = min(len(all_pts), 5)
     kmeans = KMeans(n_clusters=n_clusters, random_state=0).fit(all_pts)
-    colors = [(np.random.randint(0, 255), np.random.randint(0, 255), np.random.randint(0, 255)) for _ in range(n_clusters)]
+    colors = [(np.random.randint(0, 255), np.random.randint(0, 255), np.random.randint(0, 255)) for _ in
+              range(n_clusters)]
     cluster_labels = kmeans.labels_
 
     visualization = frame.copy()
@@ -70,6 +75,7 @@ def cluster_and_visualize_keypoints(kp_template, kp_frame, good_matches, frame):
         cv2.line(visualization, pt1, pt2, color, 2)
 
     cv2.imshow("Clustered Matches", visualization)
+
 
 def dense_optical_flow(frame1, frame2):
     """
@@ -89,6 +95,7 @@ def dense_optical_flow(frame1, frame2):
     cv2.imshow("Dense Optical Flow", visualization)
     return visualization
 
+
 def saliency_based_matching(frame, keypoints, matches):
     """
     Overlay matches on a saliency map for visualization.
@@ -104,6 +111,7 @@ def saliency_based_matching(frame, keypoints, matches):
         cv2.line(visualization, pt1, pt2, (0, 255, 0), 2)
 
     cv2.imshow("Saliency-Based Matching", visualization)
+
 
 # Main script
 template_path = '../../images/won_1000.jpg'
@@ -170,4 +178,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-

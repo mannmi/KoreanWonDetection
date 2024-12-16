@@ -18,8 +18,6 @@ orb = cv2.ORB_create()
 kp_template, des_template = orb.detectAndCompute(template, None)
 
 cap = Camera()
-# Use the common camera opening function
-#cap = open_camera()
 
 # Record the time
 start_time = time.time()
@@ -69,7 +67,6 @@ while True:
 
     # Display the video feed with detected template
     cv2.imshow('Detected Template', frame_matches)
-
 
     # Camera closed, if 20 seconds past
     elapsed_time = time.time() - start_time

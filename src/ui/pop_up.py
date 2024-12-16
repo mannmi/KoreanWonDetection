@@ -1,5 +1,5 @@
-import sys
-from PyQt6.QtWidgets import QApplication, QLabel, QDialog, QVBoxLayout
+from PyQt6.QtWidgets import QLabel, QDialog, QVBoxLayout
+
 
 class SimplePopup(QDialog):
     def __init__(self, message):
@@ -14,4 +14,3 @@ class SimplePopup(QDialog):
         layout.addWidget(label)
 
         self.setLayout(layout)
-

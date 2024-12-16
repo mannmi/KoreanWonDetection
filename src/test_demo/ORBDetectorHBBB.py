@@ -22,6 +22,7 @@ preprocess_dino = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
+
 def extract_dino_features(image):
     """
     Extract features from an image using DINO.
@@ -33,6 +34,7 @@ def extract_dino_features(image):
     with torch.no_grad():
         features = dino_model(image_tensor)
     return features
+
 
 def detect_objects_with_detr(image):
     """
@@ -46,6 +48,7 @@ def detect_objects_with_detr(image):
     boxes = outputs['pred_boxes'][0]
     return probabilities, boxes
 
+
 def match_keypoints(des_template, des_frame):
     """
     Match descriptors using BFMatcher with Lowe's ratio test.
@@ -54,6 +57,7 @@ def match_keypoints(des_template, des_frame):
     matches = bf.knnMatch(des_template, des_frame, k=2)
     good_matches = [m for m, n in matches if m.distance < 0.75 * n.distance]
     return good_matches
+
 
 def find_homography_and_draw(template, kp_template, frame, kp_frame, good_matches):
     """
@@ -70,6 +74,7 @@ def find_homography_and_draw(template, kp_template, frame, kp_frame, good_matche
         frame = cv2.polylines(frame, [np.int32(dst)], True, (0, 255, 0), 3, cv2.LINE_AA)
         print("Match found using homography!")
     return frame
+
 
 # Load template image and extract DINO features
 template_path = '../../images/won_1000.jpg'

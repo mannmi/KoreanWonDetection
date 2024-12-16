@@ -17,5 +17,6 @@ class TestCamera(unittest.TestCase):
     def tearDown(self):
         self.camera.release()
 
+
 if __name__ == '__main__':
     unittest.main()
