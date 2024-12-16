@@ -12,3 +12,4 @@ scikit-learn
 saliency
 setuptools
 ultralytics
+opencv-python-headless
