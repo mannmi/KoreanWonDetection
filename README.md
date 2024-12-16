@@ -1,6 +1,6 @@
 <p align="center">
   <!-- PSE Acceleration Program logo -->
-  <img width=40% src="./Documentation/Logo.webp">
+  <img width=40% src="docs/Logo.webp">
 </p>
 
 <p align="center">
@@ -8,21 +8,22 @@
 </p>
 
 <p align="center">
-  <a href="https://discord.gg/HTFRuQPy"><img src="https://img.shields.io/discord/901152454077452399?color=7289da&style=flat-square&label=Discord&logo=discord&logoColor=white"></a>
+  <a href="[https://discord.gg/HTFRuQPy](https://discord.gg/xtXwxhNE)"><img src="https://img.shields.io/discord/901152454077452399?color=7289da&style=flat-square&label=Discord&logo=discord&logoColor=white"></a>
 
   
 </p>
 
-# Korean Won Detection
+# Korean Won Detection :heavy_dollar_sign:  :kr:
 
 This project uses OpenCV to identify different currencies from images. It leverages computer vision techniques to detect and classify various banknotes and coins (korean won).
 
-## Features
+## Features :sunny:
 
 - Detects and identifies different won from images (webcam feed)
 - Easy to extend with additional currencies
+- [Easy Video tutorial For Korean Won Detection](https://www.youtube.com/watch?v=BTIA6J3FxKE)
 
-## Philosophy
+## Philosophy :gift_heart:
 
 The philosophy behind Korean Won Detection is built on accuracy, reliability, and adaptability, ensuring the tool meets diverse user needs effectively.
 
@@ -41,28 +42,28 @@ Clear APIs and documentation will ensure ease of use and integration, encouragin
 - Community to Commercial:
 Distribute to many users for educational purposes, and if projects and Discord are activated later, some functions are supplemented to take care of commercial purposes together
 
-## Installation
+## Installation :swimmer:
 For a guid to how to install the application Refer to INSTALL.md
-=> [Documentation/INSTAL.md](Documentation/INSTAL.md)
+=> [docs/INSTAL.md](docs/INSTAL.md)
 
 
-## Usage
-todo add usage description later
+## Usage :video_game:
+[To check Github Wiki to know how to use our code!](https://github.com/mannmi/KoreanWonDetection/wiki/How-it-works)
 
-## Contributing
+## Contributing :violin:
 
 Contributions are welcome! Please see the CONTRIBUTING.md, COMMIT_MESSAGE.md,CODE_OF_CONDUCT.md for guidelines.
 
-* CONTRIBUTING.md => [Documentation/CONTRIBUTING.md](Documentation/CONTRIBUTING.md)  
-* COMMIT_MESSAGE.md => [Documentation/COMMIT_MESSAGE.md](Documentation/CONTRIBUTING.md)
-* CODE_OF_CONDUCT.md => [Documentation/CODE_OF_CONDUCT.md](Documentation/CODE_OF_CONDUCT.md)
+* CONTRIBUTING.md => [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)  
+* COMMIT_MESSAGE.md => [docs/COMMIT_MESSAGE.md](docs/CONTRIBUTING.md)
+* CODE_OF_CONDUCT.md => [docs/CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md)
 
-## License
+## License :city_sunrise:
 
 This project is licensed under the LGPL-2.1 License. See the LICENSE file for details.
 * License => https://github.com/mannmi/KoreanWonDetection?tab=LGPL-2.1-1-ov-file
 
-## Acknowledgements
+## Acknowledgements :love_hotel:
 
 - OpenCV: https://opencv.org/
 - OpenCV Forum: https://forum.opencv.org/
@@ -75,3 +76,5 @@ Minhyuk12
 protruser
 ksj2001
 
+## Github Wiki & Education :church:
+Github Wiki Link => [github.com/mannmi/KoreanWonDetection/wiki](github.com/mannmi/KoreanWonDetection/wiki)
