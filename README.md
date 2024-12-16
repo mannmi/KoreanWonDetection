@@ -42,15 +42,15 @@ Clear APIs and documentation will ensure ease of use and integration, encouragin
 - Community to Commercial:
 Distribute to many users for educational purposes, and if projects and Discord are activated later, some functions are supplemented to take care of commercial purposes together
 
-## Installation
+## Installation :swimmer:
 For a guid to how to install the application Refer to INSTALL.md
 => [docs/INSTAL.md](docs/INSTAL.md)
 
 
-## Usage
+## Usage :video_game:
 [To check Github Wiki to know how to use our code!](https://github.com/mannmi/KoreanWonDetection/wiki/How-it-works)
 
-## Contributing
+## Contributing :violin:
 
 Contributions are welcome! Please see the CONTRIBUTING.md, COMMIT_MESSAGE.md,CODE_OF_CONDUCT.md for guidelines.
 
