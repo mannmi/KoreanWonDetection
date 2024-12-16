@@ -17,7 +17,7 @@
 
 This project uses OpenCV to identify different currencies from images. It leverages computer vision techniques to detect and classify various banknotes and coins (korean won).
 
-## Features
+## Features :sunny:
 
 - Detects and identifies different won from images (webcam feed)
 - Easy to extend with additional currencies
