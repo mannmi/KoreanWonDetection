@@ -1,5 +1,3 @@
-import os
-import sys
 import unittest
 # Add the src directory to the Python path
 from unittest.mock import patch, mock_open
