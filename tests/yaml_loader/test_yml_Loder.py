@@ -1,5 +1,4 @@
 import os
-import sys
 import unittest
 # Add the src directory to the Python path
 from src.config_loader.configLoader import YmlLoader
