@@ -21,6 +21,7 @@ This project uses OpenCV to identify different currencies from images. It levera
 
 - Detects and identifies different won from images (webcam feed)
 - Easy to extend with additional currencies
+- [Easy Video tutorial For Korean Won Detection](https://www.youtube.com/watch?v=BTIA6J3FxKE)
 
 ## Philosophy
 
