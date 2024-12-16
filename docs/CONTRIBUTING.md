@@ -1,7 +1,7 @@
 # KoreanWonDetection - Contributing    
 
 ## Write Code
-To setup the Project you may find the installment guide useful : https://github.com/mannmi/KoreanWonDetection/docs/INSTAL.md  
+To setup the Project you may find the installment guide useful : [Instal Guide](./INSTAL.md) 
 
 * Please ensure that the issue has not been addressed in an existing Pull Request
 * Check if an Issue has been created in the issue tracker, if not create a new one.
@@ -30,15 +30,29 @@ This Project is still in its infancy so No unit testing standards have been set 
 This will be remedied as son as possible.
 
 ## Well formated commit messages.
-See Commit Message Style link : https://github.com/mannmi/KoreanWonDetection/docs/COMMIT_MESSAGE.md
+See Commit Message Style link : [COMMIT MESSAGE Style](COMMIT_MESSAGE.md)
 
 ## Write Documentation
-Todo to be determined
 
-## Coding Standards
-todo to be determined
+To ensure our codebase is well-documented and easy to understand, please follow these guidelines:
+
+Generate Doxygen Comments:
+Use Doxygen to create inline documentation for all functions, classes, and methods.
+Ensure comments are clear, concise, and provide enough detail for others to understand the purpose and usage of the code.
+
+Inline Documentation:
+Add inline comments to explain complex logic or important sections of the code.
+
+Use consistent formatting and style for all comments.
+
+Wiki Entries:
+For significant code additions or changes, create a corresponding wiki entry.
+The wiki entry should include an overview of the code, its purpose, and any important details or usage instructions.
 
 ## Additional Resources
-todo added once needed
+See the [wiki](https://github.com/mannmi/KoreanWonDetection/wiki)
+See the [issues](https://github.com/mannmi/KoreanWonDetection/issues)
+See the [Discusion](https://github.com/mannmi/KoreanWonDetection/discussions)
+See the [Discord](https://discord.gg/6hQ2FDjA)
 
 
