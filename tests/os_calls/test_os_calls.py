@@ -1,6 +1,8 @@
 import unittest
 from unittest.mock import patch, mock_open
-from src.os_calls.oscalls import is_running_in_docker, check_cuda_available, OsCalls
+from src.os_calls.oscalls import is_running_in_docker, check_cuda_available
+
+
 # Assuming the functions and class are in a module named `module_name`
 
 
