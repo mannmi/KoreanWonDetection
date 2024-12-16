@@ -58,6 +58,8 @@ jobs:
         flake8 . --exclude Algorithm_Research --ignore=E266,E501
 
     - name: Run tests with coverage
+      env:
+        COVERAGE_PROCESS_START: .coveragerc
       run: |
         pip install coverage
         coverage run -m pytest -k "not YmlLoader and not test_camera and not TestTemplateMatcher"
