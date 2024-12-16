@@ -13,7 +13,7 @@
   
 </p>
 
-# Korean Won Detection
+# Korean Won Detection :heavy_dollar_sign:
 
 This project uses OpenCV to identify different currencies from images. It leverages computer vision techniques to detect and classify various banknotes and coins (korean won).
 
@@ -23,7 +23,7 @@ This project uses OpenCV to identify different currencies from images. It levera
 - Easy to extend with additional currencies
 - [Easy Video tutorial For Korean Won Detection](https://www.youtube.com/watch?v=BTIA6J3FxKE)
 
-## Philosophy
+## Philosophy :gift_heart:
 
 The philosophy behind Korean Won Detection is built on accuracy, reliability, and adaptability, ensuring the tool meets diverse user needs effectively.
 
