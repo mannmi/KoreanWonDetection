@@ -11,4 +11,5 @@ saliency
 setuptools
 ultralytics
 pyQt6
+pytest
 
