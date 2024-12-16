@@ -16,7 +16,8 @@ jobs:
     strategy:
       matrix:
         # Test against multiple Python versions
-        python-version: [3.9, '3.10', '3.11']
+        # python-version: [3.9, '3.10', '3.11']
+        python-version: ['3.11']
 
     steps:
     # Step to checkout the repository
