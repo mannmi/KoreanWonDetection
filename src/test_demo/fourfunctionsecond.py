@@ -6,6 +6,7 @@ from sklearn.cluster import KMeans
 orb = cv2.ORB_create()
 sift = cv2.SIFT_create()
 
+
 def detect_keypoints_and_descriptors(image, method="ORB"):
     """
     Detect keypoints and compute descriptors using ORB or SIFT.
@@ -18,6 +19,7 @@ def detect_keypoints_and_descriptors(image, method="ORB"):
         raise ValueError("Invalid method. Choose 'ORB' or 'SIFT'.")
     return keypoints, descriptors
 
+
 def match_keypoints(des_template, des_frame, method="ORB"):
     """
     Match descriptors using BFMatcher with Lowe's ratio test.
@@ -27,6 +29,7 @@ def match_keypoints(des_template, des_frame, method="ORB"):
     matches = bf.knnMatch(des_template, des_frame, k=2)
     good_matches = [m for m, n in matches if m.distance < 0.75 * n.distance]
     return good_matches
+
 
 def find_homography(template, kp_template, frame, kp_frame, good_matches):
     """
@@ -44,6 +47,7 @@ def find_homography(template, kp_template, frame, kp_frame, good_matches):
             print("Homography computed and bounding box drawn.")
         return frame
     return frame
+
 
 def cluster_and_visualize_keypoints(kp_template, kp_frame, good_matches, frame):
     """
@@ -71,6 +75,7 @@ def cluster_and_visualize_keypoints(kp_template, kp_frame, good_matches, frame):
 
     cv2.imshow("Clustered Matches", visualization)
 
+
 def dense_optical_flow(frame1, frame2):
     """
     Visualize dense optical flow between two frames.
@@ -88,6 +93,7 @@ def dense_optical_flow(frame1, frame2):
 
     cv2.imshow("Dense Optical Flow", visualization)
     return visualization
+
 
 def saliency_based_matching(frame, keypoints, matches):
     """

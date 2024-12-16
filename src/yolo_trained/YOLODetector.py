@@ -1,4 +1,8 @@
 import cv2
+import torch
+from ultralytics import YOLO
+from src.os_calls.oscalls import check_cuda_available
+
 
 class YOLODetector:
     def __init__(self, model_path, video_path):

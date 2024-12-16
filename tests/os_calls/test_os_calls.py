@@ -1,12 +1,8 @@
 import unittest
 from unittest.mock import patch, mock_open
-import os
-import torch
-
 from src.os_calls.oscalls import is_running_in_docker, check_cuda_available, OsCalls
-
-
 # Assuming the functions and class are in a module named `module_name`
+
 
 class TestFunctions(unittest.TestCase):
 
@@ -44,6 +40,7 @@ class TestFunctions(unittest.TestCase):
         self.assertFalse(check_cuda_available())
         mock_cuda_available.assert_called_once()
 
+
 class TestOSCalls(unittest.TestCase):
 
     @patch('platform.system', return_value='Windows')
@@ -59,6 +56,7 @@ class TestOSCalls(unittest.TestCase):
         os_call = OsCalls()
         os_call.clear()
         mock_system.assert_called_once_with('clear')
+
 
 if __name__ == '__main__':
     unittest.main()

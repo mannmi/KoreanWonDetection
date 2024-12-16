@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import json
 
+
 class TemplateMatcher:
     def __init__(self, template_path, camera_index=0):
         # Load the template image in grayscale
