@@ -3,7 +3,6 @@ import numpy as np
 import json
 from src.camera.camera import Camera
 from src.edge_detection.EdgeDetector import EdgeDetection
-from src.ui.pop_up import SimplePopup
 
 
 class TemplateMatcher:
