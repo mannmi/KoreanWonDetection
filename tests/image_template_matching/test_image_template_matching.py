@@ -1,8 +1,4 @@
-import os
-import sys
 import unittest
-# Add the src directory to the Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 import numpy as np
 from unittest.mock import patch, MagicMock
 

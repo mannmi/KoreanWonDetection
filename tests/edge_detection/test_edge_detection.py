@@ -1,8 +1,4 @@
-import os
-import sys
 import unittest
-# Add the src directory to the Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 import cv2
 import numpy as np
 from src.edge_detection.EdgeDetector import EdgeDetection
@@ -21,7 +17,7 @@ class TestEdgeDetection(unittest.TestCase):
 
     def test_set_method(self):
         self.edge_detection.set_method('sobel')
-        self.assertEqual(self.edge_detection.method, 'sobel', "Edge detection method should be 'sobel'.")
+        self.assertEqual(self.edge_detection.detect_edges, 'sobel', "Edge detection method should be 'sobel'.")
 
 
 if __name__ == '__main__':
