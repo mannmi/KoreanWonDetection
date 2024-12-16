@@ -61,7 +61,7 @@ class YmlLoader:
         self.data[key] = value
         # self.save_config()
 
-    def detect_doblicates(self, tmpdata):
+    def detect_doublicates(self, tmpdata):
         duplicates = [key for key, value in collections.Counter(tmpdata.values()).items() if value > 1]
         print(duplicates)
 
