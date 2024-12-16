@@ -12,12 +12,12 @@ from src.ui.pop_up import SimplePopup
 
 
 class TemplateMatcher:
-    def __init__(self, template_path, edge_method='canny',popUp=False, camera_index=0):
+    def __init__(self, template_path, edge_method='canny',popUpActive=False, camera_index=0):
         self.template = cv2.imread(template_path, 0)
         if self.template is None:
             raise ValueError("Error: Template image not found or cannot be opened.")
 
-        self.popup = popUp
+        self.popupActive = popUpActive
         self.camera = Camera(camera_index)
         self.edge_detection = EdgeDetection(edge_method)
         self.bf = cv2.BFMatcher(cv2.NORM_HAMMING)
@@ -64,7 +64,7 @@ class TemplateMatcher:
             frame = cv2.polylines(frame, [np.int32(dst)], True, (0, 255, 0), 3, cv2.LINE_AA)
             print("Match found!")
             print(len(good_matches))
-            if not self.found and self.popup:
+            if not self.found and self.popupActive:
                 self.match_found()
                 self.found = True
 
