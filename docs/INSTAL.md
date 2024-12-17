@@ -69,3 +69,4 @@ To begin using the repository:
 2. Experiment with different detection methods.  
 3. Understand the implementation details.  
 4. Test the algorithms with various Korean Won note images.  
+=======
